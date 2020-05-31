@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="bottom_menu_size">23dp</dimen>
+    <dimen name="menu_margin">25dp</dimen>
+    <dimen name="footer_menu_size">23dp</dimen>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:elevation="15dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/camera_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_camera"/>
+
+            <ImageView
+                    android:id="@+id/insta_img"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_insta"/>
+
+            <ImageView
+                    android:id="@+id/send_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_send"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header_layout"
+            android:layout_above="@+id/bottom_layout"/>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:elevation="15dp"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:id="@+id/home_icon"
+                        android:layout_width="@dimen/bottom_menu_size"
+                        android:layout_height="@dimen/bottom_menu_size"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/menu_margin"
+                        android:src="@drawable/ic_black_home"
+                />
+
+                <ImageView
+                        android:id="@+id/search_icon"
+                        android:layout_width="@dimen/bottom_menu_size"
+                        android:layout_height="@dimen/bottom_menu_size"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/add_icon"
+                        android:layout_toEndOf="@+id/home_icon"
+                        android:src="@drawable/ic_big_search"
+                />
+
+                <ImageView
+                        android:id="@+id/add_icon"
+                        android:layout_width="@dimen/bottom_menu_size"
+                        android:layout_height="@dimen/bottom_menu_size"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_big_add"
+                />
+
+                <ImageView
+                        android:id="@+id/heart_icon"
+                        android:layout_width="@dimen/bottom_menu_size"
+                        android:layout_height="@dimen/bottom_menu_size"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/profile_icon"
+                        android:layout_toEndOf="@+id/add_icon"
+                        android:src="@drawable/ic_big_heart"
+                />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_icon"
+                        android:layout_width="@dimen/bottom_menu_size"
+                        android:layout_height="@dimen/bottom_menu_size"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/menu_margin"
+                        android:src="@drawable/profile"
+                />
+
+            </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
